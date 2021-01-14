@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">BikeApp</string>
+    <string name="error">Oops</string>
+    <string name="ok">Ok</string>
+    <string name="generic_error">Une erreur est survenue lors du chargement. Relancez l\'app</string>
+    <string name="no_network">Veuillez verifiez votre connexion internet puis relancer l\'app</string>
+    <string name="my_name">W I L L I A M S</string>
+    <string name="from">from</string>
+    <string name="select_city">Veuillez sélectonner votre ville</string>
+    <string name="nb_bike">%d V</string>
+
+    <plurals name="nb_bike">
+        <item quantity="zero">Aucun vélo mécanique</item>
+        <item quantity="one">1 vélo mécanique</item>
+        <item quantity="other">%d vélos mécaniques</item>
+    </plurals>
+
+    <plurals name="nb_electrical_bike">
+        <item quantity="zero">Aucun vélo électrique</item>
+        <item quantity="one">1 vélo électrique</item>
+        <item quantity="other">%d vélos électriques</item>
+    </plurals>
+
+    <plurals name="nb_stand">
+        <item quantity="zero">Aucune place disponible</item>
+        <item quantity="one">1 place disponible</item>
+        <item quantity="other">%d places disponibles</item>
+    </plurals>
+</resources>

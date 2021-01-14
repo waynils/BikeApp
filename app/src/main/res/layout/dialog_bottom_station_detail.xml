@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activityVM"
+            type="com.wb.bikeapp.ui.map.MapViewModel" />
+
+        <variable
+            name="vm"
+            type="com.wb.bikeapp.ui.detail.StationDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_app_background"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:text="@{activityVM.liveShowStation.name}"
+            tools:text="Station name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textStyle="italic"
+            android:id="@+id/address"
+            android:textSize="@dimen/_14ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Adresse"
+            android:text="@{activityVM.liveShowStation.address}"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <com.wb.bikeapp.ui.shared.NumberBikeView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/bike"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:color="@android:color/holo_green_dark"
+            app:img="@drawable/ic_bike"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:plural="@{@plurals/nb_bike}"
+            app:quantity="@{activityVM.liveShowStation.bikeAvailable}" />
+
+        <com.wb.bikeapp.ui.shared.NumberBikeView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/electrical_bike"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:color="@color/teal_200"
+            app:img="@drawable/ic_bike"
+            app:layout_constraintTop_toBottomOf="@id/bike"
+            app:plural="@{@plurals/nb_electrical_bike}"
+            app:quantity="@{activityVM.liveShowStation.electricalBikeAvailable}" />
+
+        <com.wb.bikeapp.ui.shared.NumberBikeView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/stand"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:color="@android:color/holo_red_light"
+            app:img="@drawable/ic_parking"
+            app:layout_constraintTop_toBottomOf="@id/electrical_bike"
+            app:plural="@{@plurals/nb_stand}"
+            app:quantity="@{activityVM.liveShowStation.standAvailable}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
