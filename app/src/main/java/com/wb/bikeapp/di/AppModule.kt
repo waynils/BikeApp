@@ -1,6 +1,7 @@
 package com.wb.bikeapp.di
 
 import com.squareup.moshi.Moshi
+import com.wb.bikeapp.BikeApp
 import com.wb.bikeapp.helper.Keys
 import com.wb.bikeapp.helper.variant.VariantHelper
 import com.wb.bikeapp.helper.variant.VariantHelperImpl
@@ -11,7 +12,7 @@ import com.wb.bikeapp.repositories.BikeRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -19,7 +20,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
-@InstallIn(ApplicationComponent::class)
+
+@InstallIn(SingletonComponent::class)
 @Module
 class AppModule {
 

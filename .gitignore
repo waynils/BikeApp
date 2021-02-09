@@ -40,3 +40,6 @@ gradle-app.setting
 
 # Android Studio
 captures/
+
+*.cxx
+app/.cxx/*
