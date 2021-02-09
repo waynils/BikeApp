@@ -2,7 +2,7 @@ BikeApp
 An android app can show bike available for a city choosen.
 I use JCDecaux's Api : https://developer.jcdecaux.com/#/home
 
-This app is coded in MVVM, Clean archi with:  
+This app was coded in MVVM, Clean archi with:  
 -RX  
 -Hilt for dependency injection  
 -Lottie for animated icon  
