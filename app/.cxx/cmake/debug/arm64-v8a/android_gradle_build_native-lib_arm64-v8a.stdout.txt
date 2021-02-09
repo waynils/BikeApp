@@ -1,2 +1,0 @@
-ninja: Entering directory `/Users/Wiwi/Downloads/appauth-android-codelab-master/BikeApp/app/.cxx/cmake/debug/arm64-v8a'
-ninja: no work to do.
